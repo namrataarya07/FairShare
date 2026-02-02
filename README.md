@@ -192,11 +192,17 @@ This helps tailor reminder tone and prevent unnecessary social friction.
 
 ## 🛠 Tech Stack
 
-    Layer	Technology
-    UI/UX	Figma
-    Frontend	HTML, CSS, JavaScript
-    Charts	Chart.js
-    Storage	LocalStorage / Firebase
+| Layer | Technology | Purpose |
+| :---- | :---- | :---- |
+| 🎨 **UI/UX Design** | Figma | Wireframing, prototyping, and user flow design |
+| 🌐 **Frontend** | HTML, CSS, JavaScript | Building the user interface and interactions |
+| 🧠 **Logic Layer** | JavaScript Algorithms | Fairness calculations, balance tracking, conflict detection |
+| 📊 **Visualization** | Chart.js | Expense insights and contribution charts |
+| 💾 **Storage** | LocalStorage (Prototype) | Storing demo user and expense data |
+| 🔁 **Version Control** | Git & GitHub | Code management and collaboration |
+| 🧩 **Architecture** | Modular Client-Side Structure | Separating UI, logic, and data handling |
+| 🎥 **Demo** | Screen Recording | Demonstration of working prototype |
+
 
 ---
 ## ❤️ Our Vision
