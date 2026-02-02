@@ -38,6 +38,20 @@ System	Purpose
 💬 Social Comfort System	Generates polite, non-awkward reminders
 ⚖ Conflict Monitor	Detects imbalance before disputes arise
 📊 Insight Engine	Analyzes spending behavior & mood patterns
+🧠 Key Innovation
+
+We focus on financial UX, not just financial math.
+
+FairShare treats expense management as a social experience, not just a transaction log.
+
+We introduce:
+
+Contribution-based payer rotation
+
+Emotional spending insights
+
+Personality-aware reminder system
+
 🚀 Quick Start
 git clone https://github.com/namrataarya07/FairShare.git
 
@@ -45,12 +59,36 @@ git clone https://github.com/namrataarya07/FairShare.git
 Open /frontend/index.html in your browser.
 
 🧩 System Architecture
+
 User → Expense System → Balance Engine → Fairness Engine → Conflict Monitor → Insight Engine
 
+Flow of Interaction:
+
+User logs shared expense
+
+System splits cost
+
+Balances updated
+
+Fairness engine evaluates contribution ratios
+
+Conflict monitor checks imbalance
+
+Insights engine updates behavioral data
+
+🗄 Database Structure
+Entity	Purpose
+Users	Profile, payment behavior, personality tag
+Rooms	Grouping of roommates
+Expenses	Shared transactions
+Balances	Who owes whom
+Fairness Stats	Contribution ratios & imbalance tracking
 ⚙️ Fairness Logic
 contribution_score_i = (Total Paid by User_i) / (Total Room Expenses)
-
 imbalance_i = Total Paid_i - (Total Room Expenses / N)
+
+
+System suggests next payer based on lowest contribution score.
 
 🏷 Personality Tagging
 Tag	Meaning
@@ -60,23 +98,7 @@ Tag	Meaning
 💸 Over-Contributor	Pays more than share
 📊 Features
 
-Expense Management
-
-Add expense
-
-Category tracking
-
-Fairness Intelligence
-
-Suggest next payer
-
-Fairness meter
-
-Social Comfort
-
-Polite reminders
-
-Silent Mode
+Expense Management, Fairness Intelligence, Social Comfort, Conflict Prevention, Smart Insights.
 
 🌍 Impact
 
@@ -87,11 +109,7 @@ Silent Mode
 
 🔮 Future Scope
 
-UPI integration
-
-WhatsApp reminders
-
-AI predictions
+UPI integration • WhatsApp reminders • AI predictions • Multi-room analytics
 
 🛠 Tech Stack
 
