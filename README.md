@@ -5,8 +5,7 @@ Reducing roommate money conflicts through fairness intelligence and socially-awa
 
 📌 Overview
 
-FairShare is a smart expense sharing system designed for hostels and shared accommodations.
-Unlike traditional expense trackers that focus only on numbers, FairShare focuses on people — addressing the emotional and social friction that arises from shared financial responsibilities.
+FairShare is a smart expense sharing system designed for hostels and shared accommodations. Unlike traditional expense trackers that focus only on numbers, FairShare focuses on people — addressing the emotional and social friction that arises from shared financial responsibilities.
 
 We combine financial logic + behavioral design to transform awkward money conversations into smooth, conflict-free interactions.
 
@@ -97,51 +96,13 @@ Fairness Stats	Contribution ratios & imbalance tracking
 
 FairShare ensures balanced contributions using proportional expense tracking.
 
-The contribution score for any user i is calculated as:
-
-contribution_score
-𝑖
-=
-Total Paid by User
-𝑖
-∑
-Total Room Expenses
-contribution_score
-i
-	​
-
-=
-∑Total Room Expenses
-Total Paid by User
-i
-	​
-
-	​
+contribution_score_i = (Total Paid by User_i) / (Total Room Expenses)
 
 
 The system prioritizes the user with the lowest contribution score as the suggested next payer.
 
 Conflict Detection
-imbalance
-𝑖
-=
-Total Paid
-𝑖
-−
-Total Room Expenses
-𝑁
-imbalance
-i
-	​
-
-=Total Paid
-i
-	​
-
-−
-N
-Total Room Expenses
-	​
+imbalance_i = Total Paid_i - (Total Room Expenses / N)
 
 
 If the imbalance exceeds a defined threshold, the Conflict Monitor triggers a fairness alert.
