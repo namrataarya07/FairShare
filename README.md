@@ -69,6 +69,7 @@ Flow of Interaction
 5-Conflict monitor checks imbalance
 
 6- engine updates behavioral data
+
 ---
 ## 🗄 Database Structure
 | Entity | Purpose |
@@ -79,6 +80,7 @@ Flow of Interaction
 | **Balances** |	Who owes whom |
 | **Fairness Stats** |	Contribution ratios & imbalance tracking |
 ---
+
 ## ⚙️ Fairness Logic (Core Algorithm)
 
 FairShare ensures balanced contributions using proportional expense tracking.
@@ -95,6 +97,7 @@ imbalance​(i) =Total Paidi(i)− Total Room Expenses
                               -------------------
                                        N​
 If the imbalance exceeds a defined threshold, the Conflict Monitor triggers a fairness alert.
+
 ---
 
 ## 🏷 Personality Tagging System
@@ -119,40 +122,51 @@ But their total dues are eventually cleared
 No outstanding balance beyond the defined limit
 
 This helps tailor reminder tone and prevent unnecessary social friction.
+
 ---
-📊 Features in Detail
+
+## 📊 Features in Detail
 💰 **Expense Management**
+
     ● Add shared expense
-    ● Category tracking
+	● Category tracking
     ● Budget monitoring
 
 🤝 **Fairness Intelligence**
+
     ● Suggests next payer
     ● Fairness meter
     ● Contribution tracking
 
 💬 **Social Comfort**
+
     ● Polite reminder messages
     ● Silent Mode (budget tight)
     ● Mood tagging during spending
 
 ⚖ **Conflict Prevention**
+
     ● Early imbalance detection
     ● Payment personality insights
 
 📈 **Smart Insights**
+
     ● Spending patterns
     ● Mood-based analysis
     ● Behavioral budgeting tips
+	
 ---
 
-🎨 **UI/UX Design Philosophy**
+## 🎨 **UI/UX Design Philosophy**
+
     ● Calm, student-friendly design
     ● Minimalist navy-cream theme
     ● Emotionally safe financial interface
     ● We design for comfort, not pressure.
+	
 ---
-🌍 Impact
+
+## 🌍 Impact
 
 FairShare:
 
@@ -161,26 +175,33 @@ FairShare:
 ✔ Removes social awkwardness
 ✔ Builds financial awareness
 ✔ Protects friendships
+
 ---
-🔮 Future Scope
+
+## 🔮 Future Scope
 
    UPI & payment integration
    WhatsApp smart reminder bot
    AI spending prediction
    Multi-room analytics
    Gamified saving challenges
+   
 ---
-🛠 Tech Stack
+
+## 🛠 Tech Stack
+
 Layer	Technology
 UI/UX	Figma
 Frontend	HTML, CSS, JavaScript
 Charts	Chart.js
 Storage	LocalStorage / Firebase
+
 ---
-❤️ Our Vision
+## ❤️ Our Vision
 
 FairShare is not just about splitting bills.
 It’s about creating financial harmony in shared living.
 
 Fintech that protects friendships.
+
 ---
