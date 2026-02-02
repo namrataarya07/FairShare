@@ -12,7 +12,10 @@
         <p class="subtitle">Equitable Living Simplified</p>
 
         <h2>Join Your Room</h2>
+
         <input type="text" id="username" placeholder="Enter your name">
+
+        <input type="text" id="roomcode" placeholder="Enter room code">
 
         <button onclick="goJoin()">Continue</button>
     </div>
@@ -21,11 +24,16 @@
 <script>
 function goJoin() {
     let name = document.getElementById("username").value;
-    if(name === ""){
-        alert("Please enter your name");
+    let code = document.getElementById("roomcode").value;
+
+    if(name === "" || code === ""){
+        alert("Please enter name and room code");
         return;
     }
+
     localStorage.setItem("username", name);
+    localStorage.setItem("roomcode", code);
+
     window.location.href = "join.html";
 }
 </script>
