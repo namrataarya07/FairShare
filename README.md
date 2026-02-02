@@ -168,33 +168,32 @@ This helps tailor reminder tone and prevent unnecessary social friction.
 
 ## 🌍 Impact
 
-FairShare:
+**FairShare:**
 
-✔ Reduces roommate money conflicts
-✔ Encourages fair contribution
-✔ Removes social awkwardness
-✔ Builds financial awareness
-✔ Protects friendships
+    ✔ Reduces roommate money conflicts
+	✔ Encourages fair contribution
+	✔ Removes social awkwardness
+	✔ Builds financial awareness
+	✔ Protects friendships
 
 ---
 
 ## 🔮 Future Scope
-
-   UPI & payment integration
-   WhatsApp smart reminder bot
-   AI spending prediction
-   Multi-room analytics
-   Gamified saving challenges
+     UPI & payment integration
+     WhatsApp smart reminder bot
+     AI spending prediction
+     Multi-room analytics
+     Gamified saving challenges
    
 ---
 
 ## 🛠 Tech Stack
 
-Layer	Technology
-UI/UX	Figma
-Frontend	HTML, CSS, JavaScript
-Charts	Chart.js
-Storage	LocalStorage / Firebase
+    Layer	Technology
+    UI/UX	Figma
+    Frontend	HTML, CSS, JavaScript
+    Charts	Chart.js
+    Storage	LocalStorage / Firebase
 
 ---
 ## ❤️ Our Vision
