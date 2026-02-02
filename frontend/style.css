@@ -49,3 +49,13 @@ button {
 button:hover {
     background-color: #2563EB;
 }
+.roommates {
+    margin: 20px 0;
+}
+
+.member {
+    background-color: #334155;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 8px 0;
+}
