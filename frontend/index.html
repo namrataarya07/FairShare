@@ -6,27 +6,29 @@
 </head>
 <body>
 
-    <h1>🌟 FairShare</h1>
-    <p>Equitable Living Simplified</p>
+<div class="container">
+    <div class="card">
+        <h1>🌟 FairShare</h1>
+        <p class="subtitle">Equitable Living Simplified</p>
 
-    <h2>Login / Join Room</h2>
-    <input type="text" placeholder="Enter your name" id="username">
-    <button onclick="login()">Join</button>
+        <h2>Join Your Room</h2>
+        <input type="text" id="username" placeholder="Enter your name">
 
-    <hr>
-
-    <div id="app" style="display:none;">
-        <h2>Dashboard</h2>
-        <p id="welcome"></p>
-
-        <h3>Add Expense</h3>
-        <input type="number" id="amount" placeholder="Amount">
-        <button onclick="addExpense()">Add</button>
-
-        <h3>Total Expenses:</h3>
-        <p id="total">₹0</p>
+        <button onclick="goJoin()">Continue</button>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<script>
+function goJoin() {
+    let name = document.getElementById("username").value;
+    if(name === ""){
+        alert("Please enter your name");
+        return;
+    }
+    localStorage.setItem("username", name);
+    window.location.href = "join.html";
+}
+</script>
+
 </body>
 </html>
