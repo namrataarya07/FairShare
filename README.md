@@ -81,21 +81,24 @@ Flow of Interaction
 | **Fairness Stats** |	Contribution ratios & imbalance tracking |
 ---
 
-## ⚙️ Fairness Logic (Core Algorithm)
+### ⚙️ Fairness Logic (Core Algorithm)
 
 FairShare ensures balanced contributions using proportional expense tracking.
 
-The contribution score for any user i is calculated as:
-contribution_score(i) ​= Total Paid by User(i)​​
-                    ---------------------
-                    ∑Total Room Expenses​
+**Contribution Score Formula**
 
-	
+```text
+contribution_score_i = (Total Paid by User_i) / (Total Room Expenses)
+```
+
 The system prioritizes the user with the lowest contribution score as the suggested next payer.
 
-imbalance​(i) =Total Paidi(i)− Total Room Expenses
-                              -------------------
-                                       N​
+### Conflict Detection
+
+```text
+imbalance_i = Total Paid_i - (Total Room Expenses / N)
+```
+
 If the imbalance exceeds a defined threshold, the Conflict Monitor triggers a fairness alert.
 
 ---
