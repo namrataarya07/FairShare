@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FairShare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🌟 FairShare</h1>
+    <p>Equitable Living Simplified</p>
+
+    <h2>Login / Join Room</h2>
+    <input type="text" placeholder="Enter your name" id="username">
+    <button onclick="login()">Join</button>
+
+    <hr>
+
+    <div id="app" style="display:none;">
+        <h2>Dashboard</h2>
+        <p id="welcome"></p>
+
+        <h3>Add Expense</h3>
+        <input type="number" id="amount" placeholder="Amount">
+        <button onclick="addExpense()">Add</button>
+
+        <h3>Total Expenses:</h3>
+        <p id="total">₹0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
