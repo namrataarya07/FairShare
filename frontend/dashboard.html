@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard - FairShare</title>
+    <title>FairShare Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -9,19 +9,21 @@
 <div class="app">
 
     <!-- SIDEBAR -->
-    <div class="sidebar">
+    <aside class="sidebar">
         <h2>FairShare</h2>
-        <p>🏠 Dashboard</p>
-        <p>📊 Insights</p>
-        <p>🤝 Fairness</p>
-    </div>
+        <nav>
+            <p>🏠 Dashboard</p>
+            <p>📊 Insights</p>
+            <p>🤝 Fairness</p>
+        </nav>
+    </aside>
 
-    <!-- MAIN CONTENT -->
-    <div class="main">
+    <!-- MAIN -->
+    <main class="main">
 
         <h1 id="welcome"></h1>
 
-        <!-- SUMMARY CARDS -->
+        <!-- CARDS -->
         <div class="cards">
             <div class="card">💰 Total Spend <br><b>₹2,400</b></div>
             <div class="card">🧍 Your Contribution <br><b>₹800</b></div>
@@ -40,7 +42,7 @@
         <!-- ADD EXPENSE -->
         <h2>Add Expense</h2>
         <div class="expense-box">
-            <input type="number" id="amount" placeholder="Amount">
+            <input type="number" placeholder="Amount">
             <select>
                 <option>Food</option>
                 <option>Rent</option>
@@ -50,7 +52,7 @@
             <button>Add Expense</button>
         </div>
 
-        <!-- EXPENSE LOG -->
+        <!-- LOG -->
         <h2>Expense Log</h2>
         <div class="log">
             <p>🍕 Food — Riddhi — ₹300</p>
@@ -58,20 +60,18 @@
             <p>💡 Utilities — You — ₹900</p>
         </div>
 
-        <!-- FAIRNESS PANEL -->
+        <!-- FAIRNESS -->
         <h2>Fairness Status</h2>
         <div class="fairness">
             Aditi has contributed less this cycle. Suggested next payer: <b>Aditi</b>
         </div>
 
-    </div>
+    </main>
 </div>
 
 <script>
-window.onload = function() {
-    let name = localStorage.getItem("username");
-    document.getElementById("welcome").innerText = "Welcome back, " + name + " 👋";
-}
+let name = localStorage.getItem("username") || "User";
+document.getElementById("welcome").innerText = "Welcome back, " + name + " 👋";
 </script>
 
 </body>
