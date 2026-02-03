@@ -38,31 +38,33 @@
 </div>
 
 <script>
+window.onload = function () {
   const user = localStorage.getItem("fairshareUser");
-  if(user){
+
+  if (user && user.trim() !== "") {
     const li = document.createElement("li");
     li.textContent = user + " (You)";
+    li.style.color = "#00d2ff";
+    li.style.fontWeight = "bold";
     document.getElementById("memberList").appendChild(li);
   }
+};
 
-  function addMember(){
-    const name = prompt("Enter member name:");
-    if(name){
-      const li = document.createElement("li");
-      li.textContent = name;
-      document.getElementById("memberList").appendChild(li);
-    }
+function addMember(){
+  const name = prompt("Enter member name:");
+  if(name){
+    const li = document.createElement("li");
+    li.textContent = name;
+    document.getElementById("memberList").appendChild(li);
   }
+}
 
-  function leaveRoom(){
-    alert("You left the room");
-    window.location.href = "index.html";
-  }
+function leaveRoom(){
+  alert("You left the room");
+  window.location.href = "index.html";
+}
 
-  function goDashboard(){
-    window.location.href = "dashboard.html";
-  }
+function goDashboard(){
+  window.location.href = "dashboard.html";
+}
 </script>
-
-</body>
-</html>
