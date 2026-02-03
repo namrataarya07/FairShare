@@ -403,3 +403,61 @@ body::after {
   padding: 8px 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+.insights-container {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.insight-top {
+  display: flex;
+  gap: 20px;
+}
+
+.trend-card, .payer-card, .expense-log {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 25px rgba(108,92,231,0.2);
+}
+
+.fake-graph {
+  height: 120px;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.circle-chart {
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#6c5ce7 40%, #00d2ff 35%, #ff8c66 25%);
+  margin: 15px auto;
+  width: 150px;
+}
+
+.trend-note {
+  margin-top: 10px;
+  color: #b8b8ff;
+}
+
+.payer-card button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  color: white;
+  cursor: pointer;
+}
+
+.log-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
