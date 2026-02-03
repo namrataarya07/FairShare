@@ -1,65 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Room | FairShare</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FairShare Room</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="page">
+<div class="dashboard-container">
 
-    <div class="room-card">
-
-        <div class="room-header">
-            <h1>🏠 Your Room</h1>
-            <p>Room Code: <strong>#FS-203</strong></p>
-        </div>
-
-        <div class="room-stats">
-            <div class="stat-card">
-                <h2>₹ 2,400</h2>
-                <span>Total Room Spend</span>
-            </div>
-
-            <div class="stat-card">
-                <h2>78%</h2>
-                <span>Fairness Balance</span>
-            </div>
-        </div>
-
-        <h3>Connected Roommates</h3>
-
-        <div class="members">
-            <div class="member">
-                <div class="avatar">R</div>
-                <span>Ridhi</span>
-            </div>
-
-            <div class="member">
-                <div class="avatar">A</div>
-                <span>Aditi</span>
-            </div>
-
-            <div class="member you">
-                <div class="avatar">Y</div>
-                <span>You</span>
-            </div>
-        </div>
-
-        <button class="primary-btn" onclick="goDashboard()">Enter Dashboard</button>
-
-        <button class="secondary-btn">+ Invite Member</button>
-
-        <div class="leave-room">Leave Room</div>
-
+  <div class="room-header">
+    <h1>Room Members</h1>
+    <div class="room-actions">
+      <button onclick="addMember()">+ Add Member</button>
+      <button onclick="leaveRoom()" class="danger">Leave Room</button>
     </div>
+  </div>
+
+  <div class="members-card">
+    <ul id="memberList">
+      <li>Aditi</li>
+      <li>Riddhi</li>
+    </ul>
+  </div>
+
+  <div class="actions-card">
+    <button class="primary" onclick="goDashboard()">Go to Dashboard</button>
+  </div>
+
+  <div class="activity-card">
+    <h3>Recent Activity</h3>
+    <p>No expenses yet. Start adding!</p>
+  </div>
 
 </div>
 
 <script>
-function goDashboard(){
+  const user = localStorage.getItem("fairshareUser");
+  if(user){
+    const li = document.createElement("li");
+    li.textContent = user + " (You)";
+    document.getElementById("memberList").appendChild(li);
+  }
+
+  function addMember(){
+    const name = prompt("Enter member name:");
+    if(name){
+      const li = document.createElement("li");
+      li.textContent = name;
+      document.getElementById("memberList").appendChild(li);
+    }
+  }
+
+  function leaveRoom(){
+    alert("You left the room");
+    window.location.href = "index.html";
+  }
+
+  function goDashboard(){
     window.location.href = "dashboard.html";
-}
+  }
 </script>
 
 </body>
