@@ -2,55 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FairShare</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FairShare | Equitable Living Simplified</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <div class="auth-container">
+  <div class="glow-bg"></div>
 
-    <div class="brand">
-      <h1>🌟 FairShare</h1>
-      <p>Equitable Living Simplified</p>
+  <div class="container">
+    <div class="logo">FairShare</div>
+    <div class="tagline">Share Expenses. Keep it Fair.</div>
+
+    <div class="input-box">
+      <input type="text" placeholder="Your Name">
     </div>
 
-    <div class="welcome">
-      <h2>Welcome to FairShare</h2>
-      <p>Share Expenses. Keep it Fair.</p>
+    <div class="input-box">
+      <input type="email" placeholder="Email Address">
     </div>
 
-    <div class="card">
+    <div class="input-box">
+      <input type="text" placeholder="Room Code">
+    </div>
 
-      <div class="input-group">
-        <span>👤</span>
-        <input type="text" placeholder="Your Name" />
-      </div>
+    <button class="join-btn" onclick="joinRoom()">Join Room</button>
 
-      <div class="input-group">
-        <span>📧</span>
-        <input type="email" placeholder="Email Address" />
-      </div>
+    <button class="google-btn">
+      <img src="https://img.icons8.com/color/24/google-logo.png"/>
+      Login with Google
+    </button>
 
-      <div class="input-group">
-        <span>#</span>
-        <input type="text" placeholder="Room Code" />
-      </div>
-
-      <a href="join.html" class="join-btn">Join Room</a>
-
-      <div class="divider">OR</div>
-
-      <button class="google-btn">Continue with Google</button>
-
-      <div class="links">
-        <a href="#">Create New Room</a>
-        <span>|</span>
-        <a href="#">Need Help?</a>
-      </div>
-
+    <div class="links">
+      <a href="#">Create New Room</a>
+      <a href="#">Need Help?</a>
     </div>
   </div>
+
+  <script>
+    function joinRoom() {
+      window.location.href = "join.html";
+    }
+  </script>
 
 </body>
 </html>
