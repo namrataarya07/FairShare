@@ -43,9 +43,12 @@
 
   <script>
     function joinRoom() {
+      const name = document.querySelector('input[placeholder="Your Name"]').value;
+      localStorage.setItem("fairshareUser", name);
       window.location.href = "join.html";
     }
   </script>
+
 
 </body>
 </html>
