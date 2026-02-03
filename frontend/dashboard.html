@@ -6,48 +6,71 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="card">
-        <h1>📊 Dashboard</h1>
-        <p class="subtitle" id="welcome"></p>
+<div class="app">
 
-        <h3>Add Expense</h3>
-        <input type="number" id="amount" placeholder="Enter amount">
-        <button onclick="addExpense()">Add Expense</button>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>FairShare</h2>
+        <p>🏠 Dashboard</p>
+        <p>📊 Insights</p>
+        <p>🤝 Fairness</p>
+    </div>
 
-        <h3>Total Room Spend</h3>
-        <p id="total">₹0</p>
+    <!-- MAIN CONTENT -->
+    <div class="main">
 
-        <button onclick="goInsights()">View Insights</button>
-        <button onclick="goFairness()">Fairness Logic</button>
+        <h1 id="welcome"></h1>
+
+        <!-- SUMMARY CARDS -->
+        <div class="cards">
+            <div class="card">💰 Total Spend <br><b>₹2,400</b></div>
+            <div class="card">🧍 Your Contribution <br><b>₹800</b></div>
+            <div class="card">⚖ Fairness Score <br><b>78%</b></div>
+            <div class="card">🔁 Next Payer <br><b>Aditi</b></div>
+        </div>
+
+        <!-- MEMBERS -->
+        <h2>Room Members</h2>
+        <div class="members">
+            <span>👩 Riddhi</span>
+            <span>👩 Aditi</span>
+            <span>🧑 You</span>
+        </div>
+
+        <!-- ADD EXPENSE -->
+        <h2>Add Expense</h2>
+        <div class="expense-box">
+            <input type="number" id="amount" placeholder="Amount">
+            <select>
+                <option>Food</option>
+                <option>Rent</option>
+                <option>Utilities</option>
+                <option>Other</option>
+            </select>
+            <button>Add Expense</button>
+        </div>
+
+        <!-- EXPENSE LOG -->
+        <h2>Expense Log</h2>
+        <div class="log">
+            <p>🍕 Food — Riddhi — ₹300</p>
+            <p>🏠 Rent — Aditi — ₹1,200</p>
+            <p>💡 Utilities — You — ₹900</p>
+        </div>
+
+        <!-- FAIRNESS PANEL -->
+        <h2>Fairness Status</h2>
+        <div class="fairness">
+            Aditi has contributed less this cycle. Suggested next payer: <b>Aditi</b>
+        </div>
+
     </div>
 </div>
 
 <script>
-let total = 0;
-
 window.onload = function() {
     let name = localStorage.getItem("username");
-    document.getElementById("welcome").innerText = "Welcome, " + name + " 👋";
-}
-
-function addExpense() {
-    let amount = document.getElementById("amount").value;
-    if(amount === "" || amount <= 0){
-        alert("Enter valid amount");
-        return;
-    }
-    total += parseInt(amount);
-    document.getElementById("total").innerText = "₹" + total;
-    document.getElementById("amount").value = "";
-}
-
-function goInsights() {
-    window.location.href = "insights.html";
-}
-
-function goFairness() {
-    window.location.href = "fairness.html";
+    document.getElementById("welcome").innerText = "Welcome back, " + name + " 👋";
 }
 </script>
 
