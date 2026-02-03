@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Insights - FairShare</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FairShare Insights</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <div class="card">
-        <h1>📈 Insights</h1>
-        <p class="subtitle">Room Spending Overview</p>
+<div class="insights-container">
 
-        <div class="member">💰 Total Room Spend: ₹2,400</div>
-        <div class="member">👩 Riddhi paid most this month</div>
-        <div class="member">🍕 Food is the top expense category</div>
+  <h1 class="dash-title">Insights</h1>
 
-        <button onclick="goBack()">Back to Dashboard</button>
+  <div class="insight-top">
+
+    <div class="trend-card">
+      <h3>Monthly Trends</h3>
+      <p>Room Spending (Last 6 months)</p>
+      <div class="fake-graph"></div>
+      <p class="trend-note">Spending increased 18% compared to last month</p>
     </div>
+
+    <div class="payer-card">
+      <h3>Payer Analysis</h3>
+      <p>Who paid the most?</p>
+      <div class="circle-chart"></div>
+      <button onclick="goFairness()">View Fairness Report</button>
+    </div>
+
+  </div>
+
+  <div class="expense-log">
+    <h3>Expense Log</h3>
+    <div class="log-item">Rent — You — ₹200</div>
+    <div class="log-item">Food — Aditi — ₹120</div>
+    <div class="log-item">Supplies — Riddhi — ₹65</div>
+    <div class="log-item">Entertainment — You — ₹35</div>
+  </div>
+
 </div>
 
 <script>
-function goBack() {
-    window.location.href = "dashboard.html";
+function goFairness(){
+  window.location.href = "fairness.html";
 }
 </script>
 
