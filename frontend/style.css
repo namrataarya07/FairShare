@@ -189,3 +189,118 @@ input, select {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make main wrapper centered */
+.center-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Improve card appearance */
+.card {
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    background: rgba(30, 41, 59, 0.9);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* Fix large empty side space */
+.card-wide {
+    max-width: 600px;
+}
+
+/* Make headings balanced */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Make inputs visually premium */
+input, select {
+    background: #0f172a;
+    color: white;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 8px rgba(99,102,241,0.6);
+}
+
+/* Buttons glow */
+.btn-primary {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 20px rgba(99,102,241,0.4);
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(124,58,237,0.6);
+}
+
+.btn-secondary {
+    font-weight: 600;
+}
+
+/* Divider style */
+.divider {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+/* Dashboard centering */
+.layout {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Dashboard content spacing */
+.content {
+    padding: 50px;
+}
+
+/* Stats cards glow */
+.stat {
+    text-align: center;
+    background: linear-gradient(145deg, #1e293b, #111827);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Members pills style */
+.member-pill {
+    background: linear-gradient(90deg, #334155, #1e293b);
+    padding: 10px 16px;
+    font-weight: 500;
+}
+
+/* Expense section center */
+.expense-row {
+    justify-content: center;
+}
+
+/* Make logs look structured */
+.log li {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 10px;
+}
