@@ -230,3 +230,103 @@ body {
     font-size: 14px;
     cursor: pointer;
 }
+/* CENTER PAGE */
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.room-card {
+    width: 520px;
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(0,0,0,0.5);
+}
+
+/* HEADER */
+.room-header p {
+    opacity: 0.6;
+}
+
+/* STATS */
+.room-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.stat-card {
+    width: 48%;
+    background: #0f172a;
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.stat-card h2 {
+    margin: 0;
+}
+
+/* MEMBERS */
+.members {
+    margin: 20px 0;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #6366f1, #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.member.you {
+    background: rgba(124,58,237,0.2);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+/* BUTTONS */
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(90deg, #6366f1, #7c3aed);
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #475569;
+    background: transparent;
+    color: white;
+    margin-top: 10px;
+}
+
+.leave-room {
+    margin-top: 15px;
+    color: #f87171;
+    font-size: 14px;
+    cursor: pointer;
+}
