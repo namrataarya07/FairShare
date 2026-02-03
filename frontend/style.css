@@ -2,160 +2,138 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  background: radial-gradient(circle at top left, #1c2a4a, #050a17 70%);
+  height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #1a1f3c, #0c0f1f 70%);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   color: white;
 }
 
-/* Center everything */
-.auth-container {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
+/* Glow Background */
+.glow-bg::before,
+.glow-bg::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
 }
 
-/* Brand */
-.brand h1 {
-  font-size: 34px;
-  font-weight: 700;
+.glow-bg::before {
+  background: #6c5ce7;
+  top: -200px;
+  left: -200px;
 }
 
-.brand p {
-  color: #9fb3e0;
-  margin-bottom: 25px;
+.glow-bg::after {
+  background: #00d2ff;
+  bottom: -200px;
+  right: -200px;
 }
 
-/* Welcome */
-.welcome h2 {
-  font-size: 30px;
-  margin-bottom: 5px;
-}
-
-.welcome p {
-  color: #aabbe6;
-  margin-bottom: 35px;
-}
-
-/* Glass Card */
-.card {
-  background: rgba(20, 28, 48, 0.85);
+/* Card */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 420px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
   backdrop-filter: blur(20px);
-  border-radius: 22px;
-  padding: 45px;
-  width: 100%;
-  max-width: 470px;
-  margin: auto;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 50px rgba(108,92,231,0.3);
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 2.3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  margin-bottom: 30px;
+  color: #b8b8ff;
 }
 
 /* Inputs */
-.input-group {
-  display: flex;
-  align-items: center;
-  background: #1d263b;
-  border-radius: 14px;
-  padding: 14px 18px;
+.input-box {
   margin-bottom: 18px;
-  transition: 0.2s;
 }
 
-.input-group span {
-  margin-right: 12px;
-  font-size: 18px;
-}
-
-.input-group input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 15px;
-}
-
-.input-group:focus-within {
-  box-shadow: 0 0 0 2px #7a5cff;
-}
-
-/* Join Button */
-.join-btn {
-  display: block;
+.input-box input {
   width: 100%;
-  padding: 16px;
-  border-radius: 14px;
-  background: linear-gradient(90deg, #6c5ce7, #9c5cff);
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
   color: white;
-  font-size: 17px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px #6c5ce7;
+}
+
+/* Buttons */
+.join-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
   font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  margin-top: 5px;
+  cursor: pointer;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  color: white;
+  box-shadow: 0 0 20px rgba(108,92,231,0.6);
   transition: 0.3s;
 }
 
 .join-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(124, 92, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(108,92,231,1);
 }
 
-/* Divider */
-.divider {
-  margin: 25px 0;
-  color: #7f8fb3;
-  font-size: 14px;
-  position: relative;
-}
-
-.divider::before,
-.divider::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 35%;
-  height: 1px;
-  background: #333b55;
-}
-
-.divider::before { left: 0; }
-.divider::after { right: 0; }
-
-/* Google Button */
 .google-btn {
+  margin-top: 12px;
   width: 100%;
-  padding: 15px;
-  border-radius: 14px;
-  border: none;
+  padding: 12px;
+  border-radius: 12px;
   background: white;
   color: black;
-  font-weight: 600;
-  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
-  transition: 0.2s;
-}
-
-.google-btn:hover {
-  transform: scale(1.03);
 }
 
 /* Links */
 .links {
-  margin-top: 22px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
   font-size: 14px;
 }
 
 .links a {
-  color: #9db1ff;
+  color: #b8b8ff;
   text-decoration: none;
 }
 
-.links span {
-  margin: 0 10px;
-  color: #555;
+.links a:hover {
+  color: #00d2ff;
 }
