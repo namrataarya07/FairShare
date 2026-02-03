@@ -465,3 +465,60 @@ canvas {
   width: 100% !important;
   max-height: 250px;
 }
+.fairness-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fair-card {
+  width: 90%;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 30px rgba(108,92,231,0.3);
+}
+
+.sub {
+  color: #b8b8ff;
+  margin-bottom: 15px;
+}
+
+.score-box {
+  margin-bottom: 20px;
+}
+
+.warn {
+  color: #ff8c66;
+}
+
+.fair-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.fair-table th, .fair-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.total-row {
+  background: rgba(108,92,231,0.2);
+}
+
+.fair-card button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  color: white;
+  font-weight: bold;
+}
