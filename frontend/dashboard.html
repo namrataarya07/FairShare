@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard | FairShare</title>
+    <title>FairShare Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
+<div class="layout">
 
     <!-- SIDEBAR -->
-    <div class="sidebar">
+    <aside class="sidebar">
         <h2>FairShare</h2>
-        <a>🏠 Dashboard</a>
-        <a>📊 Insights</a>
-        <a>⚖ Fairness</a>
-    </div>
+        <nav>
+            <a class="active">🏠 Dashboard</a>
+            <a>📊 Insights</a>
+            <a>⚖ Fairness</a>
+        </nav>
+    </aside>
 
-    <!-- MAIN CONTENT -->
-    <div class="main">
+    <!-- MAIN -->
+    <main class="content">
 
         <h1>Welcome back, Hitesh 👋</h1>
 
         <!-- TOP STATS -->
-        <div class="stats-grid">
-            <div class="card">
-                <h3>Total Room Spend</h3>
-                <p>₹ 2,400</p>
+        <div class="stats">
+            <div class="card stat">
+                <p>Total Room Spend</p>
+                <h2>₹ 2,400</h2>
             </div>
-            <div class="card">
-                <h3>Your Contribution</h3>
-                <p>₹ 800</p>
+
+            <div class="card stat">
+                <p>Your Contribution</p>
+                <h2>₹ 800</h2>
             </div>
-            <div class="card">
-                <h3>Fairness Score</h3>
-                <p>78%</p>
+
+            <div class="card stat">
+                <p>Fairness Score</p>
+                <h2>78%</h2>
             </div>
-            <div class="card">
-                <h3>Next Payer</h3>
-                <p>Aditi</p>
+
+            <div class="card stat">
+                <p>Next Payer</p>
+                <h2>Aditi</h2>
             </div>
         </div>
 
         <!-- ADD EXPENSE -->
-        <div class="card action-card">
-            <h2>Add Expense</h2>
+        <div class="card">
+            <h3>Add Expense</h3>
             <div class="expense-row">
                 <input type="number" placeholder="Amount">
                 <select>
@@ -51,13 +56,13 @@
                     <option>Rent</option>
                     <option>Utilities</option>
                 </select>
-                <button class="primary-btn">Add</button>
+                <button class="btn-primary">Add Expense</button>
             </div>
         </div>
 
         <!-- EXPENSE LOG -->
         <div class="card">
-            <h2>Expense Log</h2>
+            <h3>Expense Log</h3>
             <ul class="log">
                 <li>🍔 Food — Ridhi — ₹300</li>
                 <li>🏠 Rent — Aditi — ₹1,200</li>
@@ -67,11 +72,11 @@
 
         <!-- FAIRNESS -->
         <div class="card">
-            <h2>Fairness Status</h2>
+            <h3>Fairness Status</h3>
             <p>Aditi has contributed less this cycle. Suggested next payer: <strong>Aditi</strong></p>
         </div>
 
-    </div>
+    </main>
 
 </div>
 
