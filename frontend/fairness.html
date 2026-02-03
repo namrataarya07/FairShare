@@ -1,27 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Fairness Logic - FairShare</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FairShare Fairness Logic</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <div class="card">
-        <h1>🤝 Fairness Logic</h1>
-        <p class="subtitle">Balanced Contributions System</p>
+<div class="fairness-container">
 
-        <div class="member">Next Suggested Payer: 👩 Aditi</div>
-        <div class="member">Fairness Score: 78% Balanced</div>
-        <div class="member">⚠ Aditi has paid less this cycle</div>
+  <div class="fair-card">
+    <h1>🤝 Fairness Logic</h1>
+    <p class="sub">Balanced Contributions System</p>
 
-        <button onclick="goBack()">Back to Dashboard</button>
+    <div class="score-box">
+      <p><strong>Next Suggested Payer:</strong> 👩 Aditi</p>
+      <p><strong>Fairness Score:</strong> 78% Balanced</p>
+      <p class="warn">⚠ Aditi has paid less this cycle</p>
     </div>
+
+    <h3>Contribution Breakdown</h3>
+
+    <table class="fair-table">
+      <tr>
+        <th>Member</th>
+        <th>Amount Spent (₹)</th>
+        <th>Contribution %</th>
+      </tr>
+      <tr>
+        <td>You</td>
+        <td>₹2350</td>
+        <td>41%</td>
+      </tr>
+      <tr>
+        <td>Aditi</td>
+        <td>₹2900</td>
+        <td>51%</td>
+      </tr>
+      <tr>
+        <td>Riddhi</td>
+        <td>₹450</td>
+        <td>8%</td>
+      </tr>
+      <tr class="total-row">
+        <td><strong>Total</strong></td>
+        <td><strong>₹5700</strong></td>
+        <td>100%</td>
+      </tr>
+    </table>
+
+    <button onclick="goBack()">Go Back to Dashboard</button>
+
+  </div>
+
 </div>
 
 <script>
-function goBack() {
-    window.location.href = "dashboard.html";
+function goBack(){
+  window.location.href = "dashboard.html";
 }
 </script>
 
