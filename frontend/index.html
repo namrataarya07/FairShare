@@ -3,35 +3,44 @@
 <head>
     <title>FairShare</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <div class="card">
-        <h1>🌟 FairShare</h1>
-        <p class="subtitle">Equitable Living Simplified</p>
+<div class="hero">
+    <div class="left">
+        <h1>Welcome to <span>FairShare</span></h1>
+        <p>Share expenses. Keep it fair.</p>
+    </div>
 
+    <div class="login-card">
         <h2>Join Your Room</h2>
 
-        <input type="text" id="username" placeholder="Enter your name">
+        <input type="text" id="username" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <input type="text" id="roomcode" placeholder="Room Code">
 
-        <input type="text" id="roomcode" placeholder="Enter room code">
+        <button onclick="goJoin()">Join Room</button>
 
-        <button onclick="goJoin()">Continue</button>
+        <div class="divider">OR</div>
+
+        <button class="google-btn">Continue with Google</button>
     </div>
 </div>
 
 <script>
 function goJoin() {
     let name = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
     let code = document.getElementById("roomcode").value;
 
-    if(name === "" || code === ""){
-        alert("Please enter name and room code");
+    if(name === "" || email === "" || code === ""){
+        alert("Please fill all fields");
         return;
     }
 
     localStorage.setItem("username", name);
+    localStorage.setItem("email", email);
     localStorage.setItem("roomcode", code);
 
     window.location.href = "join.html";
