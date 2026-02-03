@@ -1,84 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>FairShare Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FairShare Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="layout">
+<div class="dash-container">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h2>FairShare</h2>
-        <nav>
-            <a class="active">🏠 Dashboard</a>
-            <a>📊 Insights</a>
-            <a>⚖ Fairness</a>
-        </nav>
-    </aside>
+  <h1 class="dash-title">Room Dashboard</h1>
 
-    <!-- MAIN -->
-    <main class="content">
+  <!-- TOTAL SPENT -->
+  <div class="summary-card">
+    <h3>Total Room Expense</h3>
+    <h2 id="totalAmount">₹0</h2>
+  </div>
 
-        <h1>Welcome back, Hitesh 👋</h1>
+  <!-- ADD EXPENSE -->
+  <div class="expense-card">
+    <h3>Add Expense</h3>
+    <input type="text" id="desc" placeholder="Expense Description">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="addExpense()">Add Expense</button>
+  </div>
 
-        <!-- TOP STATS -->
-        <div class="stats">
-            <div class="card stat">
-                <p>Total Room Spend</p>
-                <h2>₹ 2,400</h2>
-            </div>
+  <!-- FAIRNESS + REMINDER -->
+  <div class="insight-row">
 
-            <div class="card stat">
-                <p>Your Contribution</p>
-                <h2>₹ 800</h2>
-            </div>
+    <div class="fairness-card">
+      <h3>Fairness Meter</h3>
+      <p>Suggested Next Payer:</p>
+      <h2>Aditi (56%)</h2>
+      <button onclick="goInsights()">View Insights</button>
+    </div>
 
-            <div class="card stat">
-                <p>Fairness Score</p>
-                <h2>78%</h2>
-            </div>
+    <div class="reminder-card">
+      <h3>Gentle Reminder</h3>
+      <p><strong>Riddhi owes you ₹500</strong></p>
+      <button onclick="sendReminder()">Remind Politely</button>
+    </div>
 
-            <div class="card stat">
-                <p>Next Payer</p>
-                <h2>Aditi</h2>
-            </div>
-        </div>
+  </div>
 
-        <!-- ADD EXPENSE -->
-        <div class="card">
-            <h3>Add Expense</h3>
-            <div class="expense-row">
-                <input type="number" placeholder="Amount">
-                <select>
-                    <option>Food</option>
-                    <option>Rent</option>
-                    <option>Utilities</option>
-                </select>
-                <button class="btn-primary">Add Expense</button>
-            </div>
-        </div>
-
-        <!-- EXPENSE LOG -->
-        <div class="card">
-            <h3>Expense Log</h3>
-            <ul class="log">
-                <li>🍔 Food — Ridhi — ₹300</li>
-                <li>🏠 Rent — Aditi — ₹1,200</li>
-                <li>💡 Utilities — You — ₹900</li>
-            </ul>
-        </div>
-
-        <!-- FAIRNESS -->
-        <div class="card">
-            <h3>Fairness Status</h3>
-            <p>Aditi has contributed less this cycle. Suggested next payer: <strong>Aditi</strong></p>
-        </div>
-
-    </main>
+  <!-- HISTORY -->
+  <div class="history-card">
+    <h3>Expense History</h3>
+    <ul id="expenseList"></ul>
+  </div>
 
 </div>
+
+<script>
+let total = 0;
+
+function addExpense() {
+  const desc = document.getElementById("desc").value;
+  const amt = parseInt(document.getElementById("amount").value);
+
+  if(!desc || !amt) return alert("Fill all fields");
+
+  total += amt;
+  document.getElementById("totalAmount").textContent = "₹" + total;
+
+  const li = document.createElement("li");
+  li.textContent = desc + " - ₹" + amt;
+  document.getElementById("expenseList").appendChild(li);
+
+  document.getElementById("desc").value = "";
+  document.getElementById("amount").value = "";
+}
+
+function goInsights(){
+  window.location.href = "insights.html";
+}
+
+function sendReminder(){
+  alert("Reminder sent politely 😊");
+}
+</script>
 
 </body>
 </html>
