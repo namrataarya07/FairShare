@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FairShare Dashboard</title>
+    <title>Dashboard | FairShare</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -9,70 +9,71 @@
 <div class="app">
 
     <!-- SIDEBAR -->
-    <aside class="sidebar">
+    <div class="sidebar">
         <h2>FairShare</h2>
-        <nav>
-            <p>🏠 Dashboard</p>
-            <p>📊 Insights</p>
-            <p>🤝 Fairness</p>
-        </nav>
-    </aside>
+        <a>🏠 Dashboard</a>
+        <a>📊 Insights</a>
+        <a>⚖ Fairness</a>
+    </div>
 
-    <!-- MAIN -->
-    <main class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main">
 
-        <h1 id="welcome"></h1>
+        <h1>Welcome back, Hitesh 👋</h1>
 
-        <!-- CARDS -->
-        <div class="cards">
-            <div class="card">💰 Total Spend <br><b>₹2,400</b></div>
-            <div class="card">🧍 Your Contribution <br><b>₹800</b></div>
-            <div class="card">⚖ Fairness Score <br><b>78%</b></div>
-            <div class="card">🔁 Next Payer <br><b>Aditi</b></div>
-        </div>
-
-        <!-- MEMBERS -->
-        <h2>Room Members</h2>
-        <div class="members">
-            <span>👩 Riddhi</span>
-            <span>👩 Aditi</span>
-            <span>🧑 You</span>
+        <!-- TOP STATS -->
+        <div class="stats-grid">
+            <div class="card">
+                <h3>Total Room Spend</h3>
+                <p>₹ 2,400</p>
+            </div>
+            <div class="card">
+                <h3>Your Contribution</h3>
+                <p>₹ 800</p>
+            </div>
+            <div class="card">
+                <h3>Fairness Score</h3>
+                <p>78%</p>
+            </div>
+            <div class="card">
+                <h3>Next Payer</h3>
+                <p>Aditi</p>
+            </div>
         </div>
 
         <!-- ADD EXPENSE -->
-        <h2>Add Expense</h2>
-        <div class="expense-box">
-            <input type="number" placeholder="Amount">
-            <select>
-                <option>Food</option>
-                <option>Rent</option>
-                <option>Utilities</option>
-                <option>Other</option>
-            </select>
-            <button>Add Expense</button>
+        <div class="card action-card">
+            <h2>Add Expense</h2>
+            <div class="expense-row">
+                <input type="number" placeholder="Amount">
+                <select>
+                    <option>Food</option>
+                    <option>Rent</option>
+                    <option>Utilities</option>
+                </select>
+                <button class="primary-btn">Add</button>
+            </div>
         </div>
 
-        <!-- LOG -->
-        <h2>Expense Log</h2>
-        <div class="log">
-            <p>🍕 Food — Riddhi — ₹300</p>
-            <p>🏠 Rent — Aditi — ₹1,200</p>
-            <p>💡 Utilities — You — ₹900</p>
+        <!-- EXPENSE LOG -->
+        <div class="card">
+            <h2>Expense Log</h2>
+            <ul class="log">
+                <li>🍔 Food — Ridhi — ₹300</li>
+                <li>🏠 Rent — Aditi — ₹1,200</li>
+                <li>💡 Utilities — You — ₹900</li>
+            </ul>
         </div>
 
         <!-- FAIRNESS -->
-        <h2>Fairness Status</h2>
-        <div class="fairness">
-            Aditi has contributed less this cycle. Suggested next payer: <b>Aditi</b>
+        <div class="card">
+            <h2>Fairness Status</h2>
+            <p>Aditi has contributed less this cycle. Suggested next payer: <strong>Aditi</strong></p>
         </div>
 
-    </main>
-</div>
+    </div>
 
-<script>
-let name = localStorage.getItem("username") || "User";
-document.getElementById("welcome").innerText = "Welcome back, " + name + " 👋";
-</script>
+</div>
 
 </body>
 </html>
