@@ -329,3 +329,6 @@ body::after {
   border-radius: 10px;
   font-weight: bold;
 }
+.primary {
+  width: 100%;
+}
