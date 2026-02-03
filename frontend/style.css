@@ -333,3 +333,73 @@ body::after {
   margin-top: 8px;
   color: #dcdcff;
 }
+.dash-container {
+  width: 95%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.dash-title {
+  text-align: center;
+  font-size: 2.6rem;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.summary-card, .expense-card, .history-card, .fairness-card, .reminder-card {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 25px rgba(108,92,231,0.2);
+}
+
+.expense-card input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.expense-card button {
+  margin-top: 12px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  color: white;
+  font-weight: bold;
+}
+
+.insight-row {
+  display: flex;
+  gap: 20px;
+}
+
+.fairness-card button, .reminder-card button {
+  margin-top: 12px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  color: white;
+  cursor: pointer;
+}
+
+.history-card ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.history-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
