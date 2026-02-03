@@ -137,3 +137,133 @@ body {
 .links a:hover {
   color: #00d2ff;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #1a1f3c, #0c0f1f 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Glow background */
+body::before, body::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+body::before {
+  background: #6c5ce7;
+  top: -200px;
+  left: -200px;
+}
+
+body::after {
+  background: #00d2ff;
+  bottom: -200px;
+  right: -200px;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 420px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 50px rgba(108,92,231,0.3);
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  margin-bottom: 30px;
+  color: #b8b8ff;
+}
+
+.input-box {
+  margin-bottom: 18px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px #6c5ce7;
+}
+
+.join-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg,#6c5ce7,#00d2ff);
+  color: white;
+  box-shadow: 0 0 20px rgba(108,92,231,0.6);
+  transition: 0.3s;
+}
+
+.join-btn:hover {
+  transform: scale(1.05);
+}
+
+.google-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.links a {
+  color: #b8b8ff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #00d2ff;
+}
