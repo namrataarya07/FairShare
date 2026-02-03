@@ -1,128 +1,88 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top left, #0f172a, #020617 70%);
     color: white;
 }
 
-/* LOGIN */
-.login-wrapper {
+/* PAGE LAYOUT */
+.page {
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
+/* HERO TEXT */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.hero span {
+    color: #7c3aed;
+}
+
+.hero p {
+    opacity: 0.7;
+}
+
+/* LOGIN CARD */
 .login-card {
     background: #1e293b;
-    padding: 40px;
+    padding: 35px;
     border-radius: 16px;
-    width: 350px;
-    text-align: center;
+    width: 380px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
 }
 
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
 .login-card input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
+    margin: 8px 0;
+    border-radius: 10px;
     border: none;
+    background: #0f172a;
+    color: white;
 }
 
+/* BUTTON */
 .login-card button {
     width: 100%;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
-    background: #6366f1;
+    background: linear-gradient(90deg, #6366f1, #7c3aed);
     color: white;
+    font-weight: bold;
     margin-top: 10px;
+    cursor: pointer;
 }
 
+.login-card button:hover {
+    opacity: 0.9;
+}
+
+/* GOOGLE BUTTON */
 .google-btn {
-    background: white;
-    color: black;
+    background: white !important;
+    color: black !important;
 }
 
 .or {
-    margin: 15px 0;
+    text-align: center;
+    margin: 12px 0;
     opacity: 0.6;
-}
-
-/* APP LAYOUT */
-.app {
-    display: flex;
-    height: 100vh;
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 220px;
-    background: #0f172a;
-    padding: 20px;
-}
-
-/* MAIN */
-.main {
-    flex: 1;
-    padding: 40px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-}
-
-/* MEMBERS */
-.members span {
-    background: #1e293b;
-    padding: 10px 15px;
-    margin-right: 10px;
-    border-radius: 20px;
-}
-
-/* EXPENSE */
-.expense-box {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.expense-box input,
-.expense-box select {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-}
-
-.expense-box button {
-    padding: 10px 15px;
-    border-radius: 8px;
-    border: none;
-    background: #6366f1;
-    color: white;
-}
-
-/* LOG */
-.log p {
-    background: #1e293b;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* FAIRNESS */
-.fairness {
-    background: rgba(99, 102, 241, 0.2);
-    padding: 15px;
-    border-radius: 12px;
 }
